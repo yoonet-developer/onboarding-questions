@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
         ${data.adminHoursPerWeek},
         ${data.hasCurrentSupport},
         ${data.mainChallenges || null},
-        ${data.selectedChallenges ? JSON.stringify(data.selectedChallenges) : null}::text[],
+        ${data.selectedChallenges && data.selectedChallenges.length > 0 ? data.selectedChallenges : null},
         ${data.timeline},
         ${data.agreedToFullTime || false},
         ${data.estimatedSavings || 0},
