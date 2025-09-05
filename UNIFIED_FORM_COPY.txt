@@ -1,0 +1,274 @@
+=====================================
+YOONET QUALIFICATION FORM - ALL COPY
+Version: 1.0
+Date: 2025-09-04
+Total Sections: 12
+=====================================
+
+[NOTE TO COPYWRITER]
+- Edit any text between quotes
+- Keep the section headers and IDs intact
+- Don't change VARIABLE placeholders like ${amount} or {value}
+- Add [EDITED] tag after sections you modify
+- This file will be used to automatically update the application
+
+=====================================
+SECTION 1: PAGE HEADER & NAVIGATION
+=====================================
+
+BACK_BUTTON_TEXT: "Back to Yoonet"
+CLEAR_DATA_BUTTON: "Clear Data"
+SECURE_BADGE: "Secure"
+CLIENTS_BADGE: "200+ Clients"
+RETENTION_BADGE: "90% Retention"
+
+PAGE_TITLE: "Find Your Perfect VA Team"
+PAGE_TAGLINE: "Takes just 2 minutes • Get instant cost savings estimate"
+
+=====================================
+SECTION 2: PROGRESS INDICATOR
+=====================================
+
+PROGRESS_LABEL: "Progress"
+PROGRESS_PERCENTAGE: "{value}%"
+
+=====================================
+SECTION 3: BUSINESS INFORMATION
+=====================================
+
+SECTION_TITLE: "About Your Business"
+SECTION_SUBTITLE: "Let's understand your needs better"
+
+BUSINESS_TYPE_QUESTION: "What type of business do you run? *"
+BUSINESS_TYPE_OPTIONS:
+  - "Healthcare & Allied Health"
+  - "Professional Services"
+  - "E-commerce / Online Business"
+  - "Other"
+
+OTHER_BUSINESS_PLACEHOLDER: "Please specify your business type..."
+
+ADMIN_HOURS_QUESTION: "How many hours of admin work do you currently have per week? *"
+ADMIN_HOURS_OPTIONS:
+  - "Less than 5 hours"
+  - "5-10 hours"
+  - "10-20 hours"
+  - "20-40 hours"
+  - "More than 40 hours"
+
+SAVINGS_TEXT: "Save ${savings}/month"
+
+=====================================
+SECTION 4: COST CALCULATOR
+=====================================
+
+CALCULATOR_TITLE: "Your Potential Savings"
+PER_MONTH_LABEL: "Per Month"
+PER_YEAR_LABEL: "Per Year"
+TIME_FREED_LABEL: "Time Freed/Month"
+
+INDUSTRY_MESSAGES:
+  HEALTHCARE: "Redirect this time to patient care and growing your practice"
+  ECOMMERCE: "Focus on product development and growing your sales"
+  PROFESSIONAL: "Bill more client hours and expand your services"
+  DEFAULT: "Invest this time in strategic growth and innovation"
+
+=====================================
+SECTION 5: CURRENT SITUATION
+=====================================
+
+SECTION_TITLE: "Your Current Situation"
+SECTION_SUBTITLE: "Help us understand where you're at"
+
+SUPPORT_QUESTION: "Do you currently have admin support? *"
+SUPPORT_OPTIONS:
+  - "No, we handle everything ourselves"
+  - "Yes, but we need more help"
+  - "Yes, but looking to switch providers"
+
+CHALLENGES_QUESTION: "What's your biggest challenge right now?"
+CHALLENGES_QUESTION_HEALTHCARE: "What's your biggest challenge right now? (Select all that apply)"
+
+HEALTHCARE_CHALLENGES:
+  - "Medicare/DVA claiming backlog"
+  - "Appointment scheduling chaos"
+  - "Patient documentation overload"
+  - "Insurance pre-approvals delays"
+  - "Referral coordination issues"
+  - "Reception phone management"
+
+CHALLENGES_PLACEHOLDER: "Tell us about your main admin challenges..."
+
+=====================================
+SECTION 6: TIMELINE & COMMITMENT
+=====================================
+
+SECTION_TITLE: "Ready to Get Started?"
+SECTION_SUBTITLE: "Let's understand your timeline"
+
+TIMELINE_QUESTION: "When do you need support? *"
+TIMELINE_OPTIONS:
+  - "This week (urgent)"
+  - "Within 2 weeks"
+  - "Within a month"
+  - "Just exploring options"
+
+COMMITMENT_BOX_TITLE: "Important: Full-Time Commitment Only"
+COMMITMENT_BOX_INTRO: "We exclusively offer full-time VA services (40 hours/week). This ensures:"
+COMMITMENT_BENEFITS:
+  - "Dedicated team members who know your business inside-out"
+  - "Career development opportunities reducing turnover"
+  - "Consistent availability and reliable support"
+COMMITMENT_GROWTH_TEXT: "We'll help you grow into needing full-time support if you're not there yet."
+COMMITMENT_CHECKBOX: "Yes, we understand and are ready for full-time support"
+
+PRIVACY_STATEMENT_TITLE: "Your Data is Safe"
+PRIVACY_STATEMENT_TEXT: "We maintain ISO 27001 certification and follow Australian privacy laws. All team members sign comprehensive NDAs and undergo security training."
+
+=====================================
+SECTION 7: CONTACT INFORMATION
+=====================================
+
+SECTION_TITLE: "Let's Connect!"
+SECTION_SUBTITLE: "We'll reach out within 24 hours with your custom proposal"
+
+FIELD_LABELS:
+  NAME: "Your Name *"
+  COMPANY: "Company Name"
+  EMAIL: "Email Address *"
+  PHONE: "Phone Number *"
+
+FIELD_PLACEHOLDERS:
+  NAME: "John Smith"
+  COMPANY: "Your Business Name"
+  EMAIL: "john@example.com"
+  PHONE: "0400 000 000"
+
+SUBMIT_BUTTON_TEXT: "Get Your Custom Proposal"
+SUBMIT_BUTTON_DISABLED: "Please agree to full-time commitment first"
+SUBMITTING_TEXT: "Submitting..."
+
+TRUST_INDICATORS:
+  CLIENTS: "200+ Happy Clients"
+  RETENTION: "90% Retention Rate"
+  RESPONSE: "24hr Response Time"
+
+=====================================
+SECTION 8: SUCCESS/SUMMARY
+=====================================
+
+SUCCESS_ICON_ALT: "Success"
+SUCCESS_TITLE: "Perfect Match Found!"
+SUCCESS_SUBTITLE: "We've identified the ideal team for your needs"
+
+SUMMARY_BOX_TITLE: "Your Personalized Summary:"
+SUMMARY_ITEMS:
+  HOURS_BASED: "Based on your {adminHours} hours of admin work per week"
+  SAVINGS: "You'll save approximately ${estimatedSavings}/month"
+  HEALTHCARE_SPECIALTY: "Specialized healthcare team with Medicare/DVA experience"
+  FAST_TRACK: "Fast-track onboarding available - start within 7 days"
+
+NEXT_STEPS_TITLE: "What happens next?"
+NEXT_STEPS:
+  - "Our specialist will call you within 24 hours"
+  - "We'll discuss your specific needs in detail"
+  - "You'll receive a custom proposal within 48 hours"
+  - "Start with your new team member in as little as 7 days"
+
+=====================================
+SECTION 9: UPSELL SECTION
+=====================================
+
+SECTION_TITLE: "🚀 But That's Not All We Do..."
+SECTION_SUBTITLE: "Beyond VAs, we're your complete business transformation partner"
+
+SERVICE_TITLES_AND_DESCRIPTIONS:
+  CLINIKO_EXTENSIONS: 
+    TITLE: "Cliniko Extensions"
+    DESC: "Custom integrations and features for your practice management system"
+  
+  PATIENT_ANALYTICS:
+    TITLE: "Patient Data Analytics"
+    DESC: "Insights to improve patient retention and clinic efficiency"
+  
+  ECOMMERCE_AUTOMATION:
+    TITLE: "E-commerce Automation"
+    DESC: "Automate inventory, pricing, and customer communications"
+  
+  SMART_SCHEDULING:
+    TITLE: "Smart Scheduling System"
+    DESC: "AI-powered appointment optimization reducing no-shows by 40%"
+  
+  MEDICARE_AUTOMATION:
+    TITLE: "Medicare Automation"
+    DESC: "Automated claiming and reconciliation saving 15+ hours weekly"
+  
+  TEAM_TRAINING:
+    TITLE: "Team Training Programs"
+    DESC: "Upskill your entire team with our specialized training"
+  
+  PROCESS_OPTIMIZATION:
+    TITLE: "Business Process Optimization"
+    DESC: "Streamline operations for maximum efficiency and growth"
+
+UPSELL_FOOTER_TEXT: "Ask your specialist about these services during your consultation call"
+UPSELL_CTA: "Learn More About Our Full Services"
+
+=====================================
+SECTION 10: ERROR MESSAGES
+=====================================
+
+VALIDATION_ERRORS:
+  BUSINESS_TYPE: "Please select your business type"
+  ADMIN_HOURS: "Please select your admin hours"
+  SUPPORT: "Please tell us about your current support"
+  TIMELINE: "Please select your timeline"
+  COMMITMENT: "Please confirm full-time commitment"
+  NAME_REQUIRED: "Name is required"
+  EMAIL_REQUIRED: "Email is required"
+  EMAIL_INVALID: "Please enter a valid email address"
+  PHONE_REQUIRED: "Phone is required"
+
+=====================================
+SECTION 11: FOOTER
+=====================================
+
+COPYRIGHT_TEXT: "© 2024 Yoonet. Building better teams in Balanga."
+PRIVACY_LINK: "Privacy Policy"
+TERMS_LINK: "Terms of Service"
+PHONE_LINK: "1300 YOONET"
+
+=====================================
+SECTION 12: API RESPONSES & NOTIFICATIONS
+=====================================
+
+API_SUCCESS_MESSAGE: "Your information has been received. We'll contact you within 24 hours."
+API_ERROR_MESSAGE: "There was an error processing your submission. Please try again."
+
+[EMAIL NOTIFICATION SUBJECT LINES - Not implemented yet]
+LEAD_NOTIFICATION: "New Lead: {name} from {company}"
+CONFIRMATION_EMAIL: "Welcome to Yoonet - We've Received Your Information"
+
+=====================================
+END OF COPY DOCUMENT
+=====================================
+
+[INSTRUCTIONS FOR UPDATING]
+After editing this file:
+1. Save with the same filename
+2. Upload back to the application
+3. The system will automatically update all text throughout the application
+4. Test the updated application to ensure all changes appear correctly
+
+[COPYWRITER NOTES SECTION]
+Add your notes here:
+- 
+- 
+- 
+
+[CHANGE LOG]
+Date: 
+Changes Made:
+- 
+- 
+-
