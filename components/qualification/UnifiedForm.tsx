@@ -349,7 +349,7 @@ export default function UnifiedForm() {
             placeholder="Tell us about your main admin challenges..."
             value={formData.mainChallenges}
             onChange={(e) => setFormData({ ...formData, mainChallenges: e.target.value })}
-            className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none resize-none"
+            className="w-full p-4 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none resize-none text-black"
             rows={4}
           />
         )}
