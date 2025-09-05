@@ -486,7 +486,7 @@ export default function UnifiedForm() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className={cn(errors.name && "error-field")}>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label className="block text-sm font-medium text-gray-800 mb-1">
             Your Name *
           </label>
           <input
@@ -494,7 +494,7 @@ export default function UnifiedForm() {
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             className={cn(
-              "w-full p-3 border-2 rounded-lg focus:outline-none transition-colors",
+              "w-full p-3 border-2 rounded-lg focus:outline-none transition-colors text-black",
               errors.name 
                 ? "border-red-400 focus:border-red-500" 
                 : "border-gray-200 focus:border-blue-500"
@@ -514,7 +514,7 @@ export default function UnifiedForm() {
             type="text"
             value={formData.company}
             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-            className="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-colors"
+            className="w-full p-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-black"
             placeholder="Your Business Name"
           />
         </div>
@@ -528,7 +528,7 @@ export default function UnifiedForm() {
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
             className={cn(
-              "w-full p-3 border-2 rounded-lg focus:outline-none transition-colors",
+              "w-full p-3 border-2 rounded-lg focus:outline-none transition-colors text-black",
               errors.email 
                 ? "border-red-400 focus:border-red-500" 
                 : "border-gray-200 focus:border-blue-500"
@@ -549,7 +549,7 @@ export default function UnifiedForm() {
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             className={cn(
-              "w-full p-3 border-2 rounded-lg focus:outline-none transition-colors",
+              "w-full p-3 border-2 rounded-lg focus:outline-none transition-colors text-black",
               errors.phone 
                 ? "border-red-400 focus:border-red-500" 
                 : "border-gray-200 focus:border-blue-500"
@@ -614,7 +614,7 @@ export default function UnifiedForm() {
         <h3 className="font-semibold text-gray-900 mb-4">
           Your Personalized Summary:
         </h3>
-        <div className="space-y-3 text-left max-w-lg mx-auto">
+        <div className="space-y-3 text-left max-w-lg mx-auto text-black">
           <p className="flex items-start gap-2">
             <CheckCircle className="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" />
             <span>
