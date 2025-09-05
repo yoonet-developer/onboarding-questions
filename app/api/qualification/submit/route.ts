@@ -48,7 +48,12 @@ export async function POST(request: NextRequest) {
       RETURNING id, created_at
     `;
     
-    console.log(`New lead saved: ID ${result.rows[0].id}, Score: ${score}`);
+    const leadData = result.rows[0];
+    
+    // Send Slack notification
+    await sendSlackNotification(data, leadData.id, score);
+    
+    console.log(`New lead saved: ID ${leadData.id}, Score: ${score}`);
     
     return NextResponse.json({ 
       success: true, 
@@ -67,6 +72,87 @@ export async function POST(request: NextRequest) {
       },
       { status: 500 }
     );
+  }
+}
+
+async function sendSlackNotification(data: any, leadId: string, score: number) {
+  const webhookUrl = process.env.SLACK_WEBHOOK_URL;
+  
+  if (!webhookUrl) {
+    console.log('Slack webhook URL not configured');
+    return;
+  }
+
+  // Determine priority and emoji
+  const getPriority = (score: number) => {
+    if (score >= 80) return { level: 'HOT LEAD', emoji: '🔥', color: '#ff0000' };
+    if (score >= 65) return { level: 'WARM LEAD', emoji: '⚡', color: '#ff8c00' };
+    if (score >= 50) return { level: 'QUALIFIED', emoji: '✅', color: '#32cd32' };
+    return { level: 'FOLLOW UP', emoji: '📝', color: '#4169e1' };
+  };
+
+  const priority = getPriority(score);
+  
+  // Format challenges for display
+  const challenges = data.selectedChallenges?.length > 0 
+    ? data.selectedChallenges.join(', ')
+    : data.mainChallenges || 'Not specified';
+
+  const slackMessage = {
+    text: `${priority.emoji} New ${priority.level} - Score: ${score}/100`,
+    attachments: [
+      {
+        color: priority.color,
+        title: `${data.name} from ${data.company || 'Unknown Company'}`,
+        fields: [
+          {
+            title: 'Contact Info',
+            value: `Email: ${data.email}\nPhone: ${data.phone}`,
+            short: true
+          },
+          {
+            title: 'Business Details',
+            value: `Type: ${data.businessType}\nAdmin Hours: ${data.adminHoursPerWeek}/week\nTimeline: ${data.timeline}`,
+            short: true
+          },
+          {
+            title: 'Key Challenges',
+            value: challenges.length > 100 ? challenges.substring(0, 100) + '...' : challenges,
+            short: false
+          },
+          {
+            title: 'Qualification Score',
+            value: `${score}/100 - ${priority.level}`,
+            short: true
+          },
+          {
+            title: 'Estimated Savings',
+            value: `$${data.estimatedSavings}/month`,
+            short: true
+          }
+        ],
+        footer: `Lead #${leadId} | Submitted via ${data.source || 'qualification form'}`,
+        ts: Math.floor(Date.now() / 1000)
+      }
+    ]
+  };
+
+  try {
+    const response = await fetch(webhookUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(slackMessage)
+    });
+
+    if (response.ok) {
+      console.log('Slack notification sent successfully');
+    } else {
+      console.error('Failed to send Slack notification:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Error sending Slack notification:', error);
   }
 }
 
